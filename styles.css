@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+body{
+    background-color: #d8b4fe;
+}
+
+section{
+    padding-inline: 1rem;    
+}
+
+nav {
+    width: 100dvw;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    align-content: center;
+    background-color: #9333ea;
+}
+
+nav > ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+nav > ul > a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #3b0764;
+    transition: color 0.15s;
+}
+
+.welcome{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    margin-top: 3rem;
+    justify-items: center;
+}
+
+.welcome > div:first-child {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-me{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #c084fc;
+    padding-block: 2rem;
+    margin-bottom: 100px;
+}
+
+.about-me div:first-child{
+    text-align: center;
+}
+.about-me div:first-child > *{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.images-anchor{
+    position: relative;
+    display: inline-block;
+}
+
+.hover-button > *{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: lightgray;
+    display: none;
+    padding: 0.3rem 0.6rem;
+}
+
+.about-me > div > a:hover .hover-button > button{
+    display: block;
+    cursor: pointer;
+}
+.about-me > div > a:hover > img{
+    opacity: .7;
+    cursor: pointer;
+}
+
+/* #github-btn{
+    background-color: #9333ea;
+    border: 2px solid black;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+} */
+
