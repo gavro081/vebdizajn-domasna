@@ -12,6 +12,10 @@ section{
     padding-inline: 1rem;    
 }
 
+p{
+    text-align: center;
+}
+
 nav {
     width: 100dvw;
     height: 5rem;
@@ -62,15 +66,10 @@ a:hover{
     align-items: center;
     background-color: #c084fc;
     padding-block: 2rem;
-    margin-bottom: 100px;
 }
 
-.about-me div:first-child{
+.about-me p{
     text-align: center;
-}
-.about-me div:first-child > *{
-    grid-column: 1;
-    grid-row: 1;
 }
 
 .images-anchor{
@@ -106,3 +105,26 @@ a:hover{
     padding: 10px 30px;
 } */
 
+.portfolio{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr;
+    justify-items: center;
+    margin-bottom: 6rem;
+}
+
+.portfolio > p > a{
+    text-decoration: none;
+}
+.portfolio > p > a:hover{
+    text-decoration: underline;
+}
+
+.portfolio img{
+    aspect-ratio: 1.8;
+}
+
+.portfolio img:hover{
+    opacity: .7;
+    cursor: pointer;
+}
