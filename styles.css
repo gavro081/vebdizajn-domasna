@@ -187,3 +187,17 @@ footer{
 footer svg{
     height: 2.5rem;
 }
+
+.gallery img{
+    height: 350px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    justify-items: center;
+}
+
+.gallery div > img{
+    margin: 10px;
+}
