@@ -150,3 +150,13 @@ svg{
 .svg-container > a{
     text-decoration: none;
 }
+
+#about-me,
+#portfolio,
+#contact{
+    scroll-margin-top: 80px;
+}
+
+#welcome{
+    scroll-margin-top: 110px;
+}
