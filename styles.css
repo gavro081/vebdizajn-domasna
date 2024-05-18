@@ -4,8 +4,15 @@
     margin: 0;
 }
 
+:root{
+    --dark-purple: #9333ea;
+    --light-purple: #c084fc;
+    --bgc-purple:#d8b4fe;
+    --nav-height: 7.5rem;
+}
+
 body{
-    background-color: #d8b4fe;
+    background-color: var(--bgc-purple);
 }
 
 section{
@@ -14,7 +21,7 @@ section{
 
 p{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2rem;
 }
 
 img{
@@ -23,11 +30,11 @@ img{
 
 nav {
     width: 100dvw;
-    height: 5rem;
+    height: var(--nav-height);
     position: sticky;
     top: 0;
     align-content: center;
-    background-color: #9333ea;
+    background-color: var(--dark-purple);
     z-index: 1000;
 }
 
@@ -37,7 +44,7 @@ nav > ul {
     grid-template-columns: repeat(4,1fr);
     justify-items: center;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
 nav > ul > a {
@@ -55,21 +62,23 @@ a:hover{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     margin-top: 3rem;
+    padding-block: 5rem;
     justify-items: center;
 }
 
-.welcome > div:first-child {
+section > div:first-child {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: 4rem;
 }
-/* .welcome > div:first-child p{
-    font-size: 1.4rem;
-} */
 
 .welcome > div:first-child h1{
-    font-size: 2rem;
+    font-size: 4.5rem;
+}
+
+section:not(.welcome) > div:first-child h1{
+    font-size: 3.2rem;
 }
 
 .about-me{
@@ -78,13 +87,9 @@ a:hover{
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
-    background-color: #c084fc;
-    padding-block: 4rem;
+    background-color: var(--light-purple);
+    padding-block: 10rem;
 }
-/* 
-.about-me p{
-    font-size: 1.4rem;
-} */
 
 .images-anchor{
     position: relative;
@@ -97,33 +102,29 @@ a:hover{
     left: 50%;
     transform: translate(-50%, -50%); 
     border-radius: 50%;
-    border: 1px solid black;
-    background-color: lightgray;
+    background-color: var(--dark-purple);
+    height: 6rem;
+    fill: white;
     display: none;
-    padding: 0.3rem 0.6rem;
+    padding: 0.6rem;
 }
 
-.about-me > div > a:hover .hover-button > button{
+.about-me > div > a:hover .hover-button > svg,
+.portfolio > a:hover .hover-button > svg{
     display: block;
     cursor: pointer;
 }
-.about-me > div > a:hover > img{
-    opacity: .7;
+.about-me > div > a:hover > img,
+.portfolio img:hover{
+    opacity: .9;
     cursor: pointer;
+    /* transition: opacity 0.15s; */
 }
 
-/* #github-btn{
-    background-color: #9333ea;
-    border: 2px solid black;
-    font-size: 1.2rem;
-    padding: 10px 30px;
-} */
-
 .portfolio{
-    padding-block: 4rem;
+    padding-block: 7.5rem;
     display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    gap: 1rem;
+    gap: 5rem;
     justify-items: center;
 }
 
@@ -138,26 +139,21 @@ a:hover{
     aspect-ratio: 1.8;
 }
 
-.portfolio img:hover{
-    opacity: .7;
-    cursor: pointer;
-}
-
 .contact{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #c084fc;
-    padding-block: 3rem;
-    gap: 2rem;
+    background-color: var(--light-purple);
+    padding-block: 10rem;
+    gap: 4rem;
 }
 
 svg{
-    height: 4rem;
+    height: 5rem;
 }
 
 .svg-container :nth-child(2){
-    margin-inline: 2rem;
+    margin-inline: 4rem;
 }
 
 .svg-container > a{
@@ -167,16 +163,17 @@ svg{
 #about-me,
 #portfolio,
 #contact{
-    scroll-margin-top: 80px;
+    scroll-margin-top: var(--nav-height);
 }
 
 #welcome{
-    scroll-margin-top: 110px;
+    scroll-margin-top: var(--nav-height);
 }
 
 footer{
-    margin-top: 3rem;
-    background-color: #9333ea;
+    margin-top: 5rem;
+    background-color: var(--dark-purple);
+    height: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,7 +182,12 @@ footer{
 }
 
 footer svg{
-    height: 2.5rem;
+    height: 3rem;
+}
+
+footer svg:hover{
+    opacity: .75;
+    transition: opacity .15s;
 }
 
 .gallery img{
