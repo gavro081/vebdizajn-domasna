@@ -173,3 +173,17 @@ svg{
 #welcome{
     scroll-margin-top: 110px;
 }
+
+footer{
+    margin-top: 3rem;
+    background-color: #9333ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 1rem;
+    gap: 3rem;
+}
+
+footer svg{
+    height: 2.5rem;
+}
