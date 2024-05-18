@@ -29,7 +29,9 @@ img{
 }
 
 nav {
-    width: 100dvw;
+    position: absolute;
+    left: 0;
+    right: 0;
     height: var(--nav-height);
     position: sticky;
     top: 0;
@@ -171,6 +173,9 @@ svg{
 }
 
 footer{
+    position: absolute;
+    left: 0;
+    right: 0;
     margin-top: 5rem;
     background-color: var(--dark-purple);
     height: 7rem;
@@ -195,6 +200,7 @@ footer svg:hover{
 }
 
 .gallery{
+    margin-block: 4rem;
     display: grid;
     grid-template-rows: repeat(4,1fr);
     justify-items: center;
